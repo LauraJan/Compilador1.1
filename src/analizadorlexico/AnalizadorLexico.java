@@ -12,7 +12,7 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
  * @author israel
  */
 public class AnalizadorLexico {
-
+//Comentario de prueba para veririficar los permisos de GitHub
     /**
      * @param args the command line arguments
      */
