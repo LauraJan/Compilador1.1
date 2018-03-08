@@ -23,7 +23,7 @@ public class AnalizadorLexico {
         }catch(Exception ex){
             ex.toString();
         }
-        new Interfaz().setVisible(true);
+        new Interfaz1().setVisible(true);
     }
     
 }
