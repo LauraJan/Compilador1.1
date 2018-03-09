@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 public class Interfaz1 extends javax.swing.JFrame {
    
     DefaultTableModel modelo= new DefaultTableModel(); 
-    //CargaArchivo c= new CargaArchivo();
+    CargaArchivo c= new CargaArchivo();
  public Interfaz1() {
         initComponents();
         modelo.addColumn("ID TOKEN");
@@ -268,6 +268,8 @@ public class Interfaz1 extends javax.swing.JFrame {
     private void abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirActionPerformed
         // TODO add your handling code here:
         //Cargar Archivo
+        c.abreArchi();
+         txtEntrada.setText(c.devolver());
     }//GEN-LAST:event_abrirActionPerformed
 
     /**

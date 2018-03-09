@@ -1,5 +1,4 @@
 package analizadorlexico;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -7,7 +6,6 @@ import java.io.RandomAccessFile;
  * Created by israel on 07/03/18.
  * @author Israel Moreno -- Laura Perez -- Fernando Lazaro
  */
-
 public class Operadores {
 
     RandomAccessFile fichero = null;
