@@ -36,7 +36,7 @@ public class Interfaz1 extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtEntrada = new javax.swing.JTextArea();
+        txtCode = new javax.swing.JTextArea();
         btEscribir = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtSalida = new javax.swing.JTextArea();
@@ -58,10 +58,10 @@ public class Interfaz1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ANALIZADOR LÉXICO");
 
-        txtEntrada.setColumns(20);
-        txtEntrada.setRows(5);
-        txtEntrada.setName("txtEntrada"); // NOI18N
-        jScrollPane1.setViewportView(txtEntrada);
+        txtCode.setColumns(20);
+        txtCode.setRows(5);
+        txtCode.setName("txtCode"); // NOI18N
+        jScrollPane1.setViewportView(txtCode);
 
         btEscribir.setFont(new java.awt.Font("Microsoft New Tai Lue", 0, 14)); // NOI18N
         btEscribir.setText("Guardar");
@@ -234,7 +234,7 @@ public class Interfaz1 extends javax.swing.JFrame {
 
     private void btLexicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLexicoActionPerformed
         String codigo;
-        codigo=txtEntrada.getText();
+        codigo=txtCode.getText();
     }//GEN-LAST:event_btLexicoActionPerformed
 
     public void imprimirTS(){
@@ -242,7 +242,7 @@ public class Interfaz1 extends javax.swing.JFrame {
            
     private void btLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimpiarActionPerformed
         // TODO add your handling code here:
-        txtEntrada.setText("");
+        txtCode.setText("");
         txtSalida.setText("");
         for (int i = 0; i < tablaSim.getRowCount(); i++) {
            modelo.removeRow(i);
@@ -269,7 +269,7 @@ public class Interfaz1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         //Cargar Archivo
         c.abreArchi();
-         txtEntrada.setText(c.devolver());
+         txtCode.setText(c.devolver());
     }//GEN-LAST:event_abrirActionPerformed
 
     /**
@@ -332,7 +332,7 @@ public class Interfaz1 extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JMenuItem lenguaje;
     private javax.swing.JTable tablaSim;
-    private javax.swing.JTextArea txtEntrada;
+    private javax.swing.JTextArea txtCode;
     public javax.swing.JTextArea txtSalida;
     // End of variables declaration//GEN-END:variables
 }

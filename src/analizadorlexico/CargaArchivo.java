@@ -4,13 +4,18 @@
  * and open the template in the editor.
  */
 package analizadorlexico;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Reader;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
@@ -21,8 +26,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  * @author Lau Rodríguez
  */
 public class CargaArchivo {
-    
-    File archivoSelected=new File("");
+    File archivoSelected=new File("programa.txt");
     public String aux; //variable aux que almacena cada línea del codigo fuente
     public String codigo;//variable codigo que almacena todo el programa fuente
     String rutaAr;//variable rutaAr que almacena la ruta del archivo 
@@ -43,8 +47,8 @@ public class CargaArchivo {
                     if (fc != null) {//Si el filtro es diferente de nulo
                        FileReader archivos = new FileReader(archivoSelected);//Se utiliza la clase FileReader para abrir el archivo seleccionado
                        BufferedReader lee = new BufferedReader(archivos);//Se usa la clase BufferedReader para crear un buffer de lectura 
-                       aux = lee.readLine();//Variable auxiliar que almacena la lectura de una línea
-                       while (aux != null) {//Mientras que aux sea diferente de nulo, es decir que contenga caracteres
+                       //Variable auxiliar que almacena la lectura de una línea
+                       while ((aux = lee.readLine()) != null) {//Mientras que aux sea diferente de nulo, es decir que contenga caracteres
                             codigo += aux + "\n";//Variable codigo almacena acumulativamente linea por linea
                             rutaAr = archivoSelected.getAbsolutePath();//Obtiene la ruta absoluta del archivo seleccionado y se almacena en rutaAr
                        }
@@ -84,5 +88,4 @@ public class CargaArchivo {
                     e.printStackTrace();
             }
     }
-    
 }
