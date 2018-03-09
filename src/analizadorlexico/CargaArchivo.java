@@ -4,18 +4,13 @@
  * and open the template in the editor.
  */
 package analizadorlexico;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Reader;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
@@ -27,16 +22,15 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class CargaArchivo {
     
-    File archivoSelected=new File("programa.txt");
-    public String aux;
-    public String codigo;
-    boolean existe;
-    String rutaAr;
-    JFileChooser fc;
+    File archivoSelected=new File("");
+    public String aux; //variable aux que almacena cada línea del codigo fuente
+    public String codigo;//variable codigo que almacena todo el programa fuente
+    String rutaAr;//variable rutaAr que almacena la ruta del archivo 
+    JFileChooser fc;//instancia de la clase JFileChooser
     
     public void abreArchi(){
-       aux = "";
-       codigo = "";
+       aux = "";//Se inicializa aux
+       codigo = "";//Se inicializa codigo
         try {
                fc = new JFileChooser();//Se utiliza la clase JFilechooser para elegir el archivo que se abrirá
                FileNameExtensionFilter filtro = new FileNameExtensionFilter(".txt","txt");//Se define el filtro para que sólo pueda abrir archivos de extensión .txt
@@ -90,12 +84,5 @@ public class CargaArchivo {
                     e.printStackTrace();
             }
     }
-    public void mostrar(){
-      try { 
-        Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler " + "C:\\Users\\Lau Rodríguez\\Desktop\\AnalizadorS&L\\DefinicionLenguajePHP.pdf"); 
-        } 
-        catch (Exception e){ 
-        JOptionPane.showMessageDialog(null, "Error al Abrir el Archivo", "ERROR", JOptionPane.ERROR_MESSAGE); 
-        }    
-    }   
+    
 }
